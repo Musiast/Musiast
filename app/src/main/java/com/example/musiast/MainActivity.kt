@@ -10,11 +10,8 @@ class MainActivity : AppCompatActivity() {
         //coding with kotlin
         //is very easy
         //that is why
-
-
-
-        //Hello
+        //hello
+        //hi
+        //hola
     }
-
-    //Hello
 }
