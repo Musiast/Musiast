@@ -4,5 +4,4 @@
     <item android:drawable="@color/white"/>
     <item android:drawable="@drawable/ic_splashlogo" android:gravity="center"/>
 
-
 </layer-list>
