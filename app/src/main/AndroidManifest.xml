@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/SplashScreenTheme">
         <activity
-            android:name=".Login_activity"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -22,5 +22,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
