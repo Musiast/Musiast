@@ -19,6 +19,7 @@
         tools:layout_editor_absoluteX="105dp"
         tools:layout_editor_absoluteY="503dp" />
 
+
     <EditText
         android:id="@+id/editText_email"
         android
@@ -37,7 +38,6 @@
 
     <EditText
         android:id="@+id/editText_email"
-        android
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:ems="10"
