@@ -3,4 +3,6 @@
     <string name="splash_name">Musiast</string>
     <string name="pass_hint">Password</string>
     <string name="main_name">MUSIAST</string>
+    <string name="sign_in">sign in</string>
+    <string name="email_address">Email Address</string>
 </resources>
