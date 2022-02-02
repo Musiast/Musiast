@@ -3,6 +3,9 @@
     <string name="splash_name">Musiast</string>
     <string name="pass_hint">Password</string>
     <string name="main_name">MUSIAST</string>
-    <string name="sign_in">sign in</string>
+    <string name="sign_in">SIGN IN</string>
     <string name="email_address">Email Address</string>
+    <string name="google_btn">LOGIN WITH GOOGLE</string>
+    <string name="signin_btn">ALREADY A USER?</string>
+    <string name="signup_btn">SIGN UP</string>
 </resources>

@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_Musiast)
         setContentView(R.layout.activity_main)
     }
-    fun signIn(view: View?) {
+    fun signIn(@Suppress("UNUSED_PARAMETER")view: View?) {
         val intent = Intent(this@MainActivity, LoginActivity::class.java)
         startActivity(intent)
     }
