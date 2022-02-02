@@ -12,9 +12,8 @@
         <activity
             android:name=".Login_activity"
             android:exported="false" />
-        <action android:name="android.intent.action.VIEW" />
 
-        <category android:name="android.intent.category.DEFAULT" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
