@@ -34,16 +34,18 @@
 
     <Button
         android:id="@+id/button"
-        android:background="@drawable/rounded_corner"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_corner"
+        android:drawableLeft="@drawable/ic_icongoogle"
         android:text="@string/google_btn"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4" />
 
@@ -57,6 +59,7 @@
         android:layout_marginBottom="58dp"
         android:onClick="signIn"
         android:text="@string/signin_btn"
+        android:drawableLeft="@drawable/user"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,11 +75,13 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="19dp"
         android:text="@string/signup_btn"
+        android:drawableLeft="@drawable/add_user"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
