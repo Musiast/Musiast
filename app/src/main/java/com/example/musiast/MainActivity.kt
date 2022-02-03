@@ -16,4 +16,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this@MainActivity, LoginActivity::class.java)
         startActivity(intent)
     }
+    fun signUp(@Suppress("UNUSED_PARAMETER")view: View?) {
+        val intent = Intent(this@MainActivity, SignUpActivity::class.java)
+        startActivity(intent)
+    }
+
 }

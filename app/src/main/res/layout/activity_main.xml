@@ -77,6 +77,7 @@
         android:background="@drawable/rounded_corner"
         android:drawableLeft="@drawable/add_user"
         android:text="@string/signup_btn"
+        android:onClick="signUp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
