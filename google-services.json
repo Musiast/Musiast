@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "81115336982",
+    "project_id": "musiast",
+    "storage_bucket": "musiast.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81115336982:android:43502cb53ec0beed69c037",
+        "android_client_info": {
+          "package_name": "com.example.musiast"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81115336982-57528oa6pkqvp07vjl0kp3kehbj3s40h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVkmatKVpAt2MyWfT1eXP0p9FlNfuhrHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81115336982-57528oa6pkqvp07vjl0kp3kehbj3s40h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
