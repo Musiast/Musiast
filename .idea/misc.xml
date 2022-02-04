@@ -13,6 +13,11 @@
         <entry key="app/src/main/res/drawable/input_bg.xml" value="0.134" />
         <entry key="app/src/main/res/drawable/splash_image.xml" value="0.12" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/user_add.xml" value="0.1335" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.1234375" />
