@@ -47,20 +47,20 @@ class SignUpActivity: AppCompatActivity(){
                                     }
                                     else
                                     {
-                                        Toast.makeText(this,"Authentication Failed", Toast.LENGTH_LONG).show()
+                                        Toast.makeText(this,"Authentication Failed!", Toast.LENGTH_LONG).show()
                                     }
                                 }
                         }
                         else
                         {
-                            Toast.makeText(this,"User Already Registered", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this,"User Already Registered!", Toast.LENGTH_LONG).show()
                             val intent= Intent(this,LoginActivity::class.java)
                             startActivity(intent)
                         }
                     }
             }
             else{
-                Toast.makeText(this,"Enter the Details", Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Enter the Details!", Toast.LENGTH_LONG).show()
             }
         }
     }

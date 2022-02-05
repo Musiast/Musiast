@@ -27,12 +27,12 @@ class LoginActivity : AppCompatActivity() {
                             startActivity(intent)
                             finish()
                         } else {
-                            Toast.makeText(this, "Wrong Details", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this, "Incorrect Email or Password!", Toast.LENGTH_LONG).show()
                         }
                     }
             }
             else{
-                Toast.makeText(this,"Enter the Details",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Enter the Details!",Toast.LENGTH_LONG).show()
             }
         }
     }
