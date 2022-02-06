@@ -11,20 +11,27 @@
         android:supportsRtl="true"
         android:theme="@style/SplashScreenTheme">
         <activity
+            android:name=".Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".GoogleSignIn"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".SignUpActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".LoggedInActivity"
             android:exported="true"
             tools:ignore="AppLinkUrlError">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
