@@ -12,4 +12,6 @@
     <string name="show_pwd">Show Password</string>
     <string name="forgot">Forgot Password?</string>
     <string name="sign_up_user_name">Profile Name</string>
+    <string name="user_name">Name</string>
+    <string name="webclient_id">81115336982-57528oa6pkqvp07vjl0kp3kehbj3s40h.apps.googleusercontent.com</string>
 </resources>

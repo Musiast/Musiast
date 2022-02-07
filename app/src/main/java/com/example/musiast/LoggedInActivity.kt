@@ -4,15 +4,20 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_loggedin.*
 
 class LoggedInActivity: AppCompatActivity() {
     private lateinit var db: FirebaseFirestore
+    private lateinit var mAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_Musiast)
         setContentView(R.layout.activity_loggedin)
+
+        mAuth = FirebaseAuth.getInstance()
+        val currentUser = mAuth.currentUser
         val sharedPref=this?.getPreferences(Context.MODE_PRIVATE)?:return
         val isLogin=sharedPref.getString("Email","1")
         logout.setOnClickListener {
@@ -20,6 +25,7 @@ class LoggedInActivity: AppCompatActivity() {
             var intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
             finish()
+
         }
         if(isLogin=="1")
         {
@@ -43,7 +49,12 @@ class LoggedInActivity: AppCompatActivity() {
         {
             setText(isLogin)
         }
-
+        logout.setOnClickListener {
+            mAuth.signOut()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun setText(email:String?)
