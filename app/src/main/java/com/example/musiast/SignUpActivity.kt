@@ -3,6 +3,7 @@ package com.example.musiast
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -74,5 +75,10 @@ class SignUpActivity: AppCompatActivity(){
             return true
         }
         return false
+    }
+
+    fun backBtn(@Suppress("UNUSED_PARAMETER")view: View?) {
+        val intent = Intent(this@SignUpActivity, MainActivity::class.java)
+        startActivity(intent)
     }
 }

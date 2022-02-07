@@ -4,11 +4,12 @@
     <string name="pass_hint">Password</string>
     <string name="main_name">MUSIAST</string>
     <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">Sign up</string>
     <string name="email_address">Email Address</string>
-    <string name="google_btn">SIGN UP WITH GOOGLE</string>
-    <string name="signin_btn">ALREADY A USER?</string>
-    <string name="signup_btn">SIGN UP</string>
+    <string name="google_btn">Continue with Google</string>
+    <string name="signin_btn">Already a user?</string>
+    <string name="signup_btn">Create a new account</string>
     <string name="show_pwd">Show Password</string>
     <string name="forgot">Forgot Password?</string>
-    <string name="user_name">Name</string>
+    <string name="sign_up_user_name">Profile Name</string>
 </resources>

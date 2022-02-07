@@ -3,23 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:digits="abcdefghijklmnopqrstuvwxyz1234567890 ">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView2"
-        android:layout_width="188dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginBottom="65dp"
+        android:layout_width="228dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="200dp"
         android:gravity="center"
         android:padding="10dp"
-        android:text="@string/signup_btn"
+        android:text="@string/sign_up"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/login_name"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/gothicbold"
+        android:text="Sign up for MUSIAST!"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gothicregular"
+        android:textColor="@color/black"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="Make a free account to continue using Musiast."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/login_name"
@@ -30,7 +57,7 @@
         android:layout_marginBottom="29dp"
         android:background="@android:color/darker_gray"
         android:gravity="center_vertical"
-        android:hint="@string/user_name"
+        android:hint="@string/sign_up_user_name"
         android:inputType="textPersonName"
         android:padding="10dp"
         android:singleLine="true"
@@ -55,6 +82,7 @@
         android:inputType="textEmailAddress"
         android:padding="10dp"
         android:singleLine="true"
+        android:textAllCaps="false"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="16sp"
@@ -97,32 +125,27 @@
         app:layout_constraintEnd_toEndOf="@+id/login_password"
         app:layout_constraintTop_toBottomOf="@+id/login_password" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="110dp"
-        android:gravity="end"
-        android:padding="5dp"
-        android:text="@string/forgot"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SignUp" />
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/SignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="110dp"
         android:background="@drawable/rounded_corner"
-        android:text="@string/signup_btn"
-        app:layout_constraintBottom_toTopOf="@+id/forgot_password"
-        app:layout_constraintStart_toStartOf="@+id/forgot_password"
-        app:layout_constraintTop_toBottomOf="@+id/show_hide_password" />
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/backbtn"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:onClick="backBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_left" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
