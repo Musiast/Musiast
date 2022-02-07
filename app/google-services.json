@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "81115336982-malf38c2emagg70tmdskk7d2qau3a6p1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.musiast",
+            "certificate_hash": "03a45d7ee74ee4f6d2740d7395b0fc1f3594b0f0"
+          }
+        },
+        {
           "client_id": "81115336982-57528oa6pkqvp07vjl0kp3kehbj3s40h.apps.googleusercontent.com",
           "client_type": 3
         }

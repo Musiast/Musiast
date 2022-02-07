@@ -43,6 +43,7 @@
         android:drawableLeft="@drawable/ic_icon_google"
         android:fontFamily="@font/gothicbold"
         android:text="@string/google_btn"
+        android:onClick="googleSignIn"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button5"

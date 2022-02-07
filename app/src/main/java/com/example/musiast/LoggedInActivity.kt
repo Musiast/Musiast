@@ -5,7 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_loggedin.*
 
 class LoggedInActivity: AppCompatActivity() {
@@ -27,29 +29,31 @@ class LoggedInActivity: AppCompatActivity() {
             finish()
 
         }
-        if(isLogin=="1")
-        {
-            var email=intent.getStringExtra("email")
-            if(email!=null)
-            {
-                setText(email)
-                with(sharedPref.edit())
-                {
-                    putString("Email",email)
-                    apply()
-                }
-            }
-            else{
-                var intent = Intent(this,MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-        }
-        else
-        {
-            setText(isLogin)
-        }
+        //don't delete this code *************
+//        if(isLogin=="1")
+//        {
+//            var email=intent.getStringExtra("email")
+//            if(email!=null)
+//            {
+//                setText(email)
+//                with(sharedPref.edit())
+//                {
+//                    putString("Email",email)
+//                    apply()
+//                }
+//            }
+//            else{
+//                var intent = Intent(this,MainActivity::class.java)
+//                startActivity(intent)
+//                finish()
+//            }
+//        }
+//        else
+//        {
+//            setText(isLogin)
+//        }
         logout.setOnClickListener {
+            Firebase.auth.signOut()
             mAuth.signOut()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
