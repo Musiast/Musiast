@@ -7,6 +7,7 @@
     <string name="sign_up">Sign up</string>
     <string name="email_address">Email Address</string>
     <string name="google_btn">Continue with Google</string>
+    <string name="facebook_btn">Continue with Facebook</string>
     <string name="signin_btn">Already a user?</string>
     <string name="signup_btn">Create a new account</string>
     <string name="show_pwd">Show Password</string>
@@ -14,4 +15,7 @@
     <string name="sign_up_user_name">Profile Name</string>
     <string name="user_name">Name</string>
     <string name="default_web_client_id_auth">81115336982-57528oa6pkqvp07vjl0kp3kehbj3s40h.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">1651288731873071</string>
+    <string name="fb_login_protocol_scheme">fb1651288731873071</string>
+    <string name="facebook_client_token">8dd1b1728e04738b74cb45b600e08c1f</string>
 </resources>

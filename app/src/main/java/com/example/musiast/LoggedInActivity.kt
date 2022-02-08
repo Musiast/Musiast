@@ -22,6 +22,7 @@ class LoggedInActivity: AppCompatActivity() {
         val currentUser = mAuth.currentUser
         val sharedPref=this?.getPreferences(Context.MODE_PRIVATE)?:return
         val isLogin=sharedPref.getString("Email","1")
+
         logout.setOnClickListener {
             sharedPref.edit().remove("Email").apply()
             var intent = Intent(this,MainActivity::class.java)
@@ -29,36 +30,37 @@ class LoggedInActivity: AppCompatActivity() {
             finish()
 
         }
-        //don't delete this code *************
-//        if(isLogin=="1")
-//        {
-//            var email=intent.getStringExtra("email")
-//            if(email!=null)
-//            {
-//                setText(email)
-//                with(sharedPref.edit())
-//                {
-//                    putString("Email",email)
-//                    apply()
-//                }
-//            }
-//            else{
-//                var intent = Intent(this,MainActivity::class.java)
-//                startActivity(intent)
-//                finish()
-//            }
-//        }
-//        else
-//        {
-//            setText(isLogin)
-//        }
-        logout.setOnClickListener {
-            Firebase.auth.signOut()
-            mAuth.signOut()
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
+
+        if(isLogin=="1")
+        {
+            var email=intent.getStringExtra("email")
+            if(email!=null)
+            {
+                setText(email)
+                with(sharedPref.edit())
+                {
+                    putString("Email",email)
+                    apply()
+                }
+            }
+            else{
+                var intent = Intent(this,MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
+        else
+        {
+            setText(isLogin)
+        }
+
+//        logout.setOnClickListener {
+////            Firebase.auth.signOut()
+//            mAuth.signOut()
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
     }
 
     private fun setText(email:String?)

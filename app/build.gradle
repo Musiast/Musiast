@@ -35,6 +35,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.facebook.android:facebook-login:latest.release'
     implementation platform('com.google.firebase:firebase-bom:29.0.4')
     implementation 'com.google.firebase:firebase-analytics-ktx:20.0.2'
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
