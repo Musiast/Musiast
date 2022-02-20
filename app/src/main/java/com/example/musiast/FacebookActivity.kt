@@ -18,7 +18,6 @@ import java.util.*
 
 open class FacebookActivity: MainActivity(){
     private var callbackManager = CallbackManager.Factory.create()
-//    lateinit var auth: FirebaseAuth
 //    val TAG = "Error"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,11 +55,11 @@ open class FacebookActivity: MainActivity(){
     fun handleFacebookAccessToken(token: AccessToken) {
 
         val credential = FacebookAuthProvider.getCredential(token.token)
-        auth.signInWithCredential(credential)
+        mAuth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
-                    val user = auth.currentUser
+                    val user = mAuth.currentUser
                     updateUI(user)
                 } else {
                     // If sign in fails, display a message to the user.

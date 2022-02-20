@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.view.animation.Animation
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -14,18 +13,15 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 
 open class MainActivity : AppCompatActivity() {
+    lateinit var mAuth: FirebaseAuth
     private val RC_SIGN_IN = 89
     private lateinit var googleSignInClient: GoogleSignInClient
     val TAG = "Error"
-    lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_Musiast)
         setContentView(R.layout.activity_main)
-
-//        // Initialize Firebase Auth
-//        auth = Firebase.auth
 
         // Configure Google Sign In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -35,25 +31,17 @@ open class MainActivity : AppCompatActivity() {
 
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-//        // Initialize FirebaseAuth
-//        auth = FirebaseAuth.getInstance()
-
+        //To Check if user is logged in already or not
+        mAuth = FirebaseAuth.getInstance()
+        if (mAuth.currentUser != null) {
+            //user logged in
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
-//    public override fun onStart() {
-//        super.onStart()
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        val currentUser = auth.currentUser
-////        updateUI(currentUser)
-//    }
-
-//    public override fun onStop() {
-//        super.onStop()
-//        if (authListener != null) {
-//            auth.removeAuthStateListener(authListener)
-//        }
-//    }
-
+    //ContinueWithGoogle Configure
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
@@ -70,6 +58,7 @@ open class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Firebase Email Password Login Configure
     private fun firebaseAuthWithGoogle(idToken: String) {
         val auth = FirebaseAuth.getInstance()
         val credential = GoogleAuthProvider.getCredential(idToken, null)
@@ -79,7 +68,7 @@ open class MainActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("Error 90", "signInWithCredential:success")
                     val user = auth.currentUser
-                    startActivity(Intent(this, LoggedInActivity::class.java))
+                    startActivity(Intent(this, DashboardActivity::class.java))
                     finish()
                 } else {
                     // If sign in fails, display a message to the user.
@@ -108,6 +97,4 @@ open class MainActivity : AppCompatActivity() {
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
         startActivity(intent)
     }
-
-
 }

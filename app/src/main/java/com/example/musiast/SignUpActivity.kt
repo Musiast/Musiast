@@ -41,7 +41,7 @@ class SignUpActivity: AppCompatActivity(){
                                     if(task.isSuccessful)
                                     {
                                         Users.document(email).set(user)
-                                        val intent= Intent(this,LoggedInActivity::class.java)
+                                        val intent= Intent(this,DashboardActivity::class.java)
                                         intent.putExtra("email",email)
                                         startActivity(intent)
                                         finish()
