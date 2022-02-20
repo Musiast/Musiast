@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.google.common.base.Ascii.toLowerCase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_signup.*
@@ -22,7 +23,7 @@ class SignUpActivity: AppCompatActivity(){
         SignUp.setOnClickListener{
             if(checking())
             {
-                var email = login_emailid.text.toString()
+                var email = toLowerCase(login_emailid.text.toString())
                 var password = login_password.text.toString()
                 var name = login_name.text.toString()
                 val user = hashMapOf(
@@ -48,7 +49,7 @@ class SignUpActivity: AppCompatActivity(){
                                     }
                                     else
                                     {
-                                        Toast.makeText(this,"Authentication Failed!", Toast.LENGTH_LONG).show()
+                                        Toast.makeText(this,"Enter a valid Email and Password!", Toast.LENGTH_LONG).show()
                                     }
                                 }
                         }
