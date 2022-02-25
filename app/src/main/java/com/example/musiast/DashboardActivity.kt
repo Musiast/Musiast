@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_dashboard.*
 
 class DashboardActivity: AppCompatActivity() {
     private lateinit var db: FirebaseFirestore
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,13 @@ class DashboardActivity: AppCompatActivity() {
         }
         else {
             setData(isLogin)
+        }
+
+        //Experimental: If user is logged in thru google sign in
+        mAuth = FirebaseAuth.getInstance()
+        val user = mAuth.currentUser
+        if (user != null) {
+            username.text = user.displayName
         }
     }
 
