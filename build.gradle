@@ -3,11 +3,15 @@
 //config files for firebase
 buildscript {
     repositories {
+        jcenter()
         google()  // Google's Maven repository
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
 
     }
     dependencies {
         classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 

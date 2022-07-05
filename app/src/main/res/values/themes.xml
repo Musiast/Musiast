@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Musiast" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.Musiast" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/black</item>
@@ -25,4 +25,29 @@
     <style name="ShapeAppearanceOverlay">
         <item name="cornerSize">50%</item>
     </style>
+
+    <dimen name="toolbar_height">50dp</dimen>
+
+    <style name="toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/toolbar_height</item>
+        <item name="android:background">@color/whiteish</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="TitleTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/titleTextColor</item>
+    </style>
+
+    <style name="SubTitleTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/subTitleTextColor</item>
+    </style>
+
+    <style name="NormalTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/subTitleTextColor</item>
+    </style>
+
 </resources>

@@ -1,6 +1,5 @@
 package com.example.musiast
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -11,6 +10,7 @@ import com.google.firebase.ktx.Firebase
 
 class SettingsActivity:AppCompatActivity() {
     private lateinit var mAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_Musiast)

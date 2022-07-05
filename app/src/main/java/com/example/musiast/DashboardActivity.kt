@@ -5,11 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_dashboard.*
+
 
 class DashboardActivity: AppCompatActivity() {
     private lateinit var db: FirebaseFirestore
@@ -19,7 +19,6 @@ class DashboardActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_Musiast)
         setContentView(R.layout.activity_dashboard)
-
         val sharedPref=this?.getPreferences(Context.MODE_PRIVATE)?:return
         val isLogin=sharedPref.getString("Email","1")
 
@@ -44,6 +43,37 @@ class DashboardActivity: AppCompatActivity() {
         if (user != null) {
             username.text = user.displayName
         }
+
+        // Initialize and assign variable
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+        // Set Home selected
+        bottomNavigationView.selectedItemId = R.id.dashboard
+
+        // Perform item selected listener
+        bottomNavigationView.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.insights -> {
+                    val intent = Intent(this@DashboardActivity, HomeActivity::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.spotify -> {
+                    val intent = Intent(this@DashboardActivity, SpotifyActivity::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.dashboard -> return@OnNavigationItemSelectedListener true
+            }
+            false
+        })
+    }
+
+    fun lyricsButton(@Suppress("UNUSED_PARAMETER") view: View?) {
+        val intent = Intent(this@DashboardActivity, SpotifyActivity::class.java)
+        startActivity(intent)
     }
 
     private fun setData(email:String?) {
